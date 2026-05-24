@@ -1,5 +1,9 @@
-package com.phegon.FoodApp.cart.entity;
+package com.phegon.FoodApp.order.entity;
 
+import com.phegon.FoodApp.auth_users.entity.User;
+import com.phegon.FoodApp.enums.OrderStatus;
+import com.phegon.FoodApp.enums.PaymentStatus;
+import com.phegon.FoodApp.menu.entity.Menu;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,30 +11,33 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "cart_items")
+@Table(name = "order_items")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CartItem {
+public class OrderItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "cart_id")
-    private Cart cart;
+    @JoinColumn(name="order_id")
+    private Order order;
 
     @ManyToOne
-    @JoinColumn(name = "menu_id")
+    @JoinColumn(name="menu_id")
     private Menu menu;
 
     private int quantity;
 
     private BigDecimal pricePerUnit;
 
-    private BigDecimal subTotal;
+    private BigDecimal subtotal;
+
+
 }
