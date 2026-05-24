@@ -2,11 +2,14 @@ package com.phegon.FoodApp.category.entity;
 
 
 import com.phegon.FoodApp.auth_users.entity.User;
+import com.phegon.FoodApp.menu.entity.Menu;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Data

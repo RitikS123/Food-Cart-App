@@ -2,6 +2,8 @@ package com.phegon.FoodApp.payment.entity;
 
 import com.phegon.FoodApp.auth_users.entity.User;
 import com.phegon.FoodApp.category.entity.Category;
+import com.phegon.FoodApp.enums.PaymentGateway;
+import com.phegon.FoodApp.enums.PaymentStatus;
 import com.phegon.FoodApp.order.entity.Order;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
