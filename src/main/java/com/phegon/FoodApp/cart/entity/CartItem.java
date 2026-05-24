@@ -1,5 +1,6 @@
 package com.phegon.FoodApp.cart.entity;
 
+import com.phegon.FoodApp.menu.entity.Menu;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

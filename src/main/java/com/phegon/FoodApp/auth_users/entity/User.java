@@ -1,5 +1,10 @@
 package com.phegon.FoodApp.auth_users.entity;
 
+import com.phegon.FoodApp.cart.entity.Cart;
+import com.phegon.FoodApp.order.entity.Order;
+import com.phegon.FoodApp.payment.entity.Payment;
+import com.phegon.FoodApp.review.entity.Review;
+import com.phegon.FoodApp.role.entity.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -8,6 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -55,7 +61,7 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Payment> payments;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Cart cart;
 
     private LocalDateTime createdAt;
