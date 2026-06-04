@@ -19,7 +19,7 @@ public class FoodAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FoodAppApplication.class, args);
-		System.out.println("Hello Ritik");
+//		System.out.println("Hello Ritik");
 	}
 
 	@Bean
